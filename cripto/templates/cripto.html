@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Erick Alexandro Dominguez Samaniego</title>
+</head>
+<body>
+<h3>Encriptación AES </h3>
+<form action="/" method="POST">
+    {% csrf_token %}
+    <p style="color:red">{{ error }}</p>
+    <p>
+        <input placeholder="mensaje" type="text" name="mensaje" id="mensaje">
+    </p>
+    <p>Seleccione lo que desea hacer</p>
+    <p>
+        <label>
+            Encriptar
+            <input type="radio" name="tarea"  placeholder="enc"  value="enc" checked>
+        </label>
+        <label>
+            Desencriptar
+            <input type="radio" name="tarea" placeholder="des" value="des">
+        </label>
+    </p>
+    <p>
+        <input type="submit" value="Enviar">
+    </p>
+</form>
+    <p>Llave: {{ key }}</p>
+    <p>Mensaje Encriptado: {{ encrypt }}</p>
+    <p>Mensaje no Encriptado: {{ decrypt }}</p>
+</body>
+</html>
