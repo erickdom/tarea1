@@ -9,3 +9,10 @@ services:
      - "80"
     volumes:
      - .:/app
+    networks:
+     - escuela
+     - default
+networks:
+  default:
+  escuela:
+    external: true
