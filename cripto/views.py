@@ -5,8 +5,6 @@ from Crypto.Cipher import AES
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 
-from seguridad import settings
-
 
 class Criptonite(TemplateView):
     template_name = "cripto.html"
