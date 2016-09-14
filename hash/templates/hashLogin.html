@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form method="post" action="/hashLogin/">
+    <h1>Iniciar Sesión</h1>
+    <h3>HASH SHA256</h3>
+    {% csrf_token %}
+    <p style="color:red;">
+        {{ error }}
+    </p>
+
+    <input type="text" placeholder="Usuario" name="usuario">
+    <input type="password" placeholder="Contraseña" name="password">
+    <input type="submit" value="Entrar">
+    <p>
+        <a href="{% url "hashing" %}">Crear Usuario</a>
+    </p>
+</form>
+</body>
+</html>

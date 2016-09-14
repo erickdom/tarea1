@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenido</title>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <h3>Usuario {{ user }}</h3>
+    <h3>Clave hash {{ pass }}</h3>
+
+    <h4>
+        <a href="{% url "hashLogout" %}">Salir</a>
+    </h4>
+</body>
+</html>

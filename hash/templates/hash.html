@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Erick Alexandro Dominguez Samaniego</title>
+</head>
+<body>
+<h3>Encriptación AES </h3>
+<form action="/hash/" method="POST">
+    {% csrf_token %}
+    Nuevo usuario
+    <p>
+        {{ message }}
+    </p>
+    <p>
+        <input placeholder="nombre" type="text" name="nombre">
+    </p>
+    <p>
+        <input placeholder="usuario" type="text" name="usuario">
+    </p>
+    <p>
+        <input placeholder="Contraseña" type="password" name="password">
+    </p>
+    <p>
+        <input type="submit" value="Crear Usuario">
+    </p>
+    <a href="{% url "hashingLogin" %}">Ir a Inicio de sesión</a>
+</form>
+</body>
+</html>
