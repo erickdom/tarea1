@@ -3,15 +3,16 @@ services:
   web:
     restart: always
     build: .
+    #command: python manage.py runserver 0.0.0.0:8000
     ports:
-     - "8000:80"
-    expose:
-     - "80"
-    volumes:
-     - .:/app
+     - "8080:8080"
     networks:
-     - escuela
-     - default
+      - escuela
+      - default
+    expose:
+     - "8080"
+    volumes:
+     - /root/escuela/:/app
 networks:
   default:
   escuela:
